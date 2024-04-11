@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  color: white;
+  border: 1px solid #535252;
+  background-color: #30f157;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  z-index: 1000;
+  border-radius: 20px;
+  font-weight: 600;
+  
+}
+    </style>
+</head>
+<body>
+    <div class="product-box">
+        <img src="" alt="" class="product-img">
+        <h2 class="product-title">Nike Shoes</h2>
+        <span class="product-price">$79.5</span>
+        <i class='bx bx-shopping-bag add-cart' id="my-button1"></i>
+    </div>
+    <div id="my-popup1" class="popup">
+        <p>Item added to cart successfully</p>
+      </div>
+      <div class="product-box">
+        <img src="" alt="" class="product-img">
+        <h2 class="product-title">Nike Shoes</h2>
+        <span class="product-price">$79.5</span>
+        <i class='bx bx-shopping-bag add-cart' id="my-button2"></i>
+    </div>
+    <div id="my-popup2" class="popup">
+        <p>Item added to cart successfully</p>
+      </div>
+      <div class="product-box">
+        <img src="" alt="" class="product-img">
+        <h2 class="product-title">Nike Shoes</h2>
+        <span class="product-price">$79.5</span>
+        <i class='bx bx-shopping-bag add-cart' id="my-button3"></i>
+    </div>
+    <div id="my-popup3" class="popup">
+        <p>Item added to cart successfully</p>
+      </div>
+
+<script>
+    const buttons = document.querySelectorAll('.add-cart');
+const popups = document.querySelectorAll('.popup');
+
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    popups[index].style.display = 'block';
+    setTimeout(() => {
+      popups[index].style.display = 'none';
+    }, 3000);
+  });
+});
+</script>
+</body>
+</html>

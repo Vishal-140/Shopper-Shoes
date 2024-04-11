@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="icon" href="./assets/main-logo.jpg" >
+    <title>Shopper Shoes : Footwear</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+
+    <!-- box icons  -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- styles  -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="navl">
+            <li><a href="#men-collection">MEN</a></li>
+            <li><a href="#women-collection">WOMEN</a></li>
+            <li><a href="#kid-collection">KIDS</a></li>
+        </div>
+        
+        <div class="navm">
+            <li><a href="home.html">
+                <img src="./assets/main-logo.jpg" alt="">
+            </a></li>
+        </div>
+        
+        <div class="navr">
+            <li><a href="login.html">Account
+                <i class="ri-account-pin-box-line"></i>
+            </a></li>
+            <!-- <li><a href="#">Search
+                <i class="ri-search-line"></i>
+            </a></li> -->
+                
+            <li><a href="#">Wishlist
+                <i class="ri-heart-3-line"></i>
+            </a></li>
+        </div>
+            
+            <!-- CART -->
+        <li><a href="#" id="cart-icon">Cart
+            <i class='bx bx-shopping-bag' id="cart-icon"></i>
+        </a></li>
+            
+
+            <!-- INSIDE CART  -->
+        <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <div class="cart-content"></div>
+
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">₹0.00</div>
+            </div>
+            
+            <button type="button" class="btn-buy">Buy Now</button>
+            <i class='bx bx-x' id="cart-close"></i>
+        </div>
+    </div>
+    
+    <div class="marquee">
+        <marquee>Explore the latest trends in fashion! Hurry, limited stock available! Shop now Don't miss out on the season's hottest deals</marquee>
+    </div>
+
+     <!-- banner Slideshow -->
+    
+    <div class="slideshow-container">
+        <img class="img" src="./assets/banner1.jpg" alt="">
+        <img class="img" src="./assets/banner2.jpg" alt="">
+        <img class="img" src="./assets/banner3.jpg" alt="">
+        <img class="img" src="./assets/banner4.jpg" alt="">
+        <img class="img" src="./assets/banner5.jpg" alt="">
+        
+        <div class="dot-container">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        
+        <div id="prev" onclick="changeSlide(-1)">❮</div>
+        <div id="next" onclick="changeSlide(1)">❯</div>
+    </div>
+    
+        <!-- box-banner -->
+        <div class="box-banner">
+
+            <div class="banner-man" id="banner-men">
+                <h1>MEN</h1>
+                <a href="#men-collection">
+                    <img src="./assets/men4.jpg" alt="Image">
+                </a>
+            </div>
+
+            <div class="banner-women" id="banner-women">
+                <h1>WOMEN</h1>
+                <a href="#women-collection">
+                    <img src="./assets/women7.jpg" alt="Image">
+                </a>
+            </div>
+
+            <div class="banner-kid" id="banner-kid">
+                <h1>KID</h1>
+                <a href="#kid-collection">
+                    <img src="./assets/kid2.jpg" alt="Image">
+                </a>
+            </div>
+
+        </div>
+
+        <!-- men collection -->
+
+        <h2  id="men-collection">MEN Collection</h2>
+        <div class="shop-content">
+            <!-- BOX 1 -->
+            <div class="product-box">
+                <img src="./assets/men1.jpg" alt="" class="product-img">
+                <h2 class="product-title">Leather Brown Shoe</h2>
+                <span class="product-price">₹7999</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button1"></i>
+            </div>
+
+            <div id="my-popup1" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+
+            <!-- BOX 2 -->
+            <div class="product-box">
+                <img src="./assets/men2.jpg" alt="" class="product-img">
+                <h2 class="product-title">multicolor shoe</h2>
+                <span class="product-price">₹5999</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button2"></i>
+            </div>
+
+            <div id="my-popup2" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 3 -->
+            <div class="product-box">
+                <img src="./assets/men3.jpg" alt="" class="product-img">
+                <h2 class="product-title">puma white sneaker</h2>
+                <span class="product-price">₹2999</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button3"></i>
+            </div>
+            <div id="my-popup3" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 4 -->
+            <div class="product-box">
+                <img src="./assets/men4.jpg" alt="" class="product-img">
+                <h2 class="product-title">leather brown boot</h2>
+                <span class="product-price">₹1000</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button4"></i>
+            </div>
+            <div id="my-popup4" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 5 -->
+            <div class="product-box">
+                <img src="./assets/men5.jpg" alt="" class="product-img">
+                <h2 class="product-title">leather shoe</h2>
+                <span class="product-price">₹9555</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button5"></i>
+            </div>
+            <div id="my-popup5" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 6 -->
+            <div class="product-box">
+                <img src="./assets/men6.jpg" alt="" class="product-img">
+                <h2 class="product-title">white sneaker</h2>
+                <span class="product-price">₹14000</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button6"></i>
+            </div>
+            <div id="my-popup6" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 7 -->
+            <div class="product-box">
+                <img src="./assets/men7.jpg" alt="" class="product-img">
+                <h2 class="product-title">nike jordan 1</h2>
+                <span class="product-price">₹17000</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button7"></i>
+            </div>
+            <div id="my-popup7" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 8 -->
+            <div class="product-box">
+                <img src="./assets/men8.jpg" alt="" class="product-img">
+                <h2 class="product-title">yellow sneaker</h2>
+                <span class="product-price">₹1100</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button8"></i>
+            </div>
+            <div id="my-popup8" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+        </div>
+
+
+
+
+        <!-- women-collection -->
+        <h2  id="women-collection">WOMEN Collection</h2>
+        <div class="shop-content">
+            <!-- BOX 1 -->
+            <div class="product-box">
+                <img src="./assets/women1.jpg" alt="" class="product-img">
+                <h2 class="product-title">high heel</h2>
+                <span class="product-price">₹7999</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button9"></i>
+            </div>
+
+            <div id="my-popup9" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+
+            <!-- BOX 2 -->
+            <div class="product-box">
+                <img src="./assets/women2.jpg" alt="" class="product-img">
+                <h2 class="product-title">sandal</h2>
+                <span class="product-price">₹59999</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button10"></i>
+            </div>
+
+            <div id="my-popup10" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 3 -->
+            <div class="product-box">
+                <img src="./assets/women3.jpg" alt="" class="product-img">
+                <h2 class="product-title">pink heel sandal</h2>
+                <span class="product-price">₹29999</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button11"></i>
+            </div>
+            <div id="my-popup11" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 4 -->
+            <div class="product-box">
+                <img src="./assets/women4.jpg" alt="" class="product-img">
+                <h2 class="product-title">pink running shoe</h2>
+                <span class="product-price">₹2105</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button12"></i>
+            </div>
+            <div id="my-popup12" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 5 -->
+            <div class="product-box">
+                <img src="./assets/women5.jpg" alt="" class="product-img">
+                <h2 class="product-title">red high heel sandal</h2>
+                <span class="product-price">₹9995</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button13"></i>
+            </div>
+            <div id="my-popup13" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 6 -->
+            <div class="product-box">
+                <img src="./assets/women6.jpg" alt="" class="product-img">
+                <h2 class="product-title">black formal sandal</h2>
+                <span class="product-price">₹21400</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button14"></i>
+            </div>
+            <div id="my-popup14" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 7 -->
+            <div class="product-box">
+                <img src="./assets/women7.jpg" alt="" class="product-img">
+                <h2 class="product-title">pink sneaker</h2>
+                <span class="product-price">₹11700</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button15"></i>
+            </div>
+            <div id="my-popup15" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 8 -->
+            <div class="product-box">
+                <img src="./assets/women8.jpg" alt="" class="product-img">
+                <h2 class="product-title">multicolor sneaker</h2>
+                <span class="product-price">₹1110</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button16"></i>
+            </div>
+            <div id="my-popup16" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+        </div>
+
+
+
+
+        <!-- kid-collection -->
+
+        <h2  id="kid-collection">KIDS Collection</h2>
+        <div class="shop-content">
+            <!-- BOX 1 -->
+            <div class="product-box">
+                <img src="./assets/kid1.jpg" alt="" class="product-img">
+                <h2 class="product-title">high top shoe</h2>
+                <span class="product-price">₹1179</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button17"></i>
+            </div>
+
+            <div id="my-popup17" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+
+            <!-- BOX 2 -->
+            <div class="product-box">
+                <img src="./assets/kid2.jpg" alt="" class="product-img">
+                <h2 class="product-title">high top sneaker</h2>
+                <span class="product-price">₹1259</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button18"></i>
+            </div>
+
+            <div id="my-popup18" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 3 -->
+            <div class="product-box">
+                <img src="./assets/kid3.jpg" alt="" class="product-img">
+                <h2 class="product-title">black sneaker</h2>
+                <span class="product-price">₹12295</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button19"></i>
+            </div>
+            <div id="my-popup19" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 4 -->
+            <div class="product-box">
+                <img src="./assets/kid4.jpg" alt="" class="product-img">
+                <h2 class="product-title">black shoe</h2>
+                <span class="product-price">₹1105</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button20"></i>
+            </div>
+            <div id="my-popup20" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 5 -->
+            <div class="product-box">
+                <img src="./assets/kid5.jpg" alt="" class="product-img">
+                <h2 class="product-title">pink shoe</h2>
+                <span class="product-price">₹1195</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button21"></i>
+            </div>
+            <div id="my-popup21" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 6 -->
+            <div class="product-box">
+                <img src="./assets/kid6.jpg" alt="" class="product-img">
+                <h2 class="product-title">grey shoe</h2>
+                <span class="product-price">₹11400</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button22"></i>
+            </div>
+            <div id="my-popup22" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            <!-- BOX 7 -->
+            <div class="product-box">
+                <img src="./assets/kid7.jpg" alt="" class="product-img">
+                <h2 class="product-title">shoe for kid</h2>
+                <span class="product-price">₹11700</span>
+                <i class='bx bx-shopping-bag add-cart' id="my-button23"></i>
+            </div>
+            <div id="my-popup23" class="popup">
+                <p>Item added to cart successfully</p>
+              </div>
+            
+        </div>
+
+
+
+</div>
+
+    <!-- bottom-banner -->
+    <div class="bottom-banner"></div>
+
+    <div class="footer" id="footer">
+        <div class="store">
+            <h3><u>Whats In The Store</u></h3><br>
+            <li><a href="#men-collection">MEN</a></li>
+            <li><a href="#women-collection">WOMEN</a></li>
+            <li><a href="#kid-collection">KIDS</a></li>
+        </div>
+        <div class="company-info">
+            <h3><u>Company Info And Policies</u></h3><br>
+            <li><a href="##">Policy</a></li>
+            <li><a href="##">Terms & Condition</a></li>
+            <li><a href="##">Return / Exchange</a></li>
+            <li><a href="##">Newsletter</a></li>
+        </div>
+        <div class="getintouch">
+            <h3><u>Get In Touch</u></h3><br>
+            <li><a href="##">Inquiry/Complaint</a></li>
+            <li><a href="##">Contact: 1800xxxxxx</a></li>
+            <li><a href="##">Email: customercare@gmail.com</a></li>
+        </div>
+        <div class="contact"><br>
+            <i class="ri-instagram-fill"></i>
+            <i class="ri-twitter-x-fill"></i>
+            <i class="ri-facebook-fill"></i>
+            <i class="ri-youtube-fill"></i>
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <p>All copyright Reserved 2024 ©</p>
+        <p>Developed by Vishal Kumar Chaurasia ❤️</p>
+    </div>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go-to-top">Top⬆</button>
+</div>
+
+    <!-- link js  -->
+    <script src="./main.js"></script>
+</body>
+
+</html>

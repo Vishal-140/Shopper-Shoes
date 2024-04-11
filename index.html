@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+	<title>Login/Signup</title>
+	<link rel="stylesheet" href="login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<header>
+		<h1 class="heading">SHOPPER.COM</h1>
+	</header>
+
+	<!-- container div -->
+	<div class="container">
+
+		<!-- upper button section to select the login or signup form -->
+		<div class="slider"></div>
+		<div class="btn">
+			<button class="login">Login</button>
+			<button class="signup">Signup</button>
+		</div>
+
+		<!-- Form section that contains the login and the signup form -->
+		<div class="form-section">
+
+			<!-- login form -->
+			<div class="login-box">
+				<input type="email" class="email ele" id="email" placeholder="youremail@email.com">
+				<input type="password" class="password ele" id="password" placeholder="password">
+				<button class="clkbtn" onclick="auth()">Login</button>
+			</div>
+
+			<!-- signup form -->
+			<div class="signup-box">
+				<input type="text" class="name ele" placeholder="Enter your name">
+				<input type="email" class="email ele" id="email" placeholder="youremail@email.com">
+				<input type="password" class="password ele" id="password" placeholder="password">
+				<input type="password" class="password ele" id="password" placeholder="Confirm password">
+				<button class="clkbtn" onclick="auth()">Signup</button>
+			</div>
+		</div>
+	</div>
+	<script src="login.js">
+        
+
+    </script>
+</body>
+</html>
