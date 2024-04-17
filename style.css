@@ -518,3 +518,18 @@ html, body {
 
 }
 
+
+
+
+/* lazy loading */
+
+.lazy-image {
+    filter: blur(5px) grayscale(100%);
+    opacity: 0.5;
+    transition: filter 0.3s, opacity 0.3s;
+  }
+  
+  .lazy-image.loaded {
+    filter: none;
+    opacity: 1;
+  }

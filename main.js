@@ -227,3 +227,23 @@ buttons.forEach((button, index) => {
     }, 1500);
   });
 });
+
+
+
+//lazy loading
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const image = entry.target;
+      image.src = image.dataset.src;
+      image.classList.add('loaded');
+      observer.unobserve(image);
+    }
+  });
+});
+
+const lazyImages = document.querySelectorAll('.lazy-image');
+lazyImages.forEach(image => {
+  observer.observe(image);
+});
