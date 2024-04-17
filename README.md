@@ -1,2 +1,2 @@
-# Shopper.github.io
-Shopper Shoes: Footwear
+# Shopper Shoes: Footwear
+# https://vishal-140.github.io/Shopper-Shoes/
