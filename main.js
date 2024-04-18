@@ -118,7 +118,8 @@ function handle_buyOrder() {
   }
   const cartContent = cart.querySelector(".cart-content");
   cartContent.innerHTML = "";
-  alert("Your Order is Placed Successfully :)");
+  // alert("Your Order is Placed Successfully :)");
+  window.location.href = "success.html";
   itemsAdded = [];
 
   update();
@@ -226,24 +227,4 @@ buttons.forEach((button, index) => {
       popups[index].style.display = 'none';
     }, 1500);
   });
-});
-
-
-
-//lazy loading
-
-const observer = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const image = entry.target;
-      image.src = image.dataset.src;
-      image.classList.add('loaded');
-      observer.unobserve(image);
-    }
-  });
-});
-
-const lazyImages = document.querySelectorAll('.lazy-image');
-lazyImages.forEach(image => {
-  observer.observe(image);
 });
