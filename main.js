@@ -118,7 +118,6 @@ function handle_buyOrder() {
   }
   const cartContent = cart.querySelector(".cart-content");
   cartContent.innerHTML = "";
-  // alert("Your Order is Placed Successfully :)");
   window.location.href = "success.html";
   itemsAdded = [];
 
