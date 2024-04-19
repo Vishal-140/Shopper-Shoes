@@ -48,6 +48,9 @@ html, body {
     font-size: 25px;
     color: white;
   }
+  .navm a:hover, .navr a:hover {
+    color: rgb(255, 221, 0);
+  }
 
 
   @media screen and (max-width: 782px) {
@@ -94,7 +97,7 @@ html, body {
     right: 0;
     transition: .5s;
     color: black;
-    background-color: whitesmoke;
+    background-color: rgb(255, 252, 231);
     z-index: 1000;
 }
 .cart-title{
@@ -399,7 +402,7 @@ html, body {
     padding: 20px;
     color: rgb(0, 0, 0);
     border: .5px solid #000000;
-    background-color: #fde5e5;
+    background-color: rgb(255, 221, 0);
     box-shadow: 0 0 10px rgba(0,0,0,0.9);
     z-index: 1000;
     border-radius: 20px;
@@ -476,11 +479,11 @@ html, body {
 .footer {
     display: flex;
     color: white;
-    background-color: rgb(47, 47, 47);
+    background-color: rgb(87, 87, 87);
 }
 
 .footer div li a {
-    color: #bcbcbc;
+    color: #ffffff;
     text-decoration: none;
 }
 .footer > div {
@@ -490,7 +493,7 @@ html, body {
 }
 
 .footer div li a:hover {
-    color: white;
+    color: rgb(255, 221, 0);
 }
 
 .contact {
@@ -513,7 +516,7 @@ html, body {
 
 .contact > i:hover {
     color: black;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 221, 0);
     border: 2px solid black;
 }
 
@@ -540,8 +543,8 @@ html, body {
 }
 .copyright p {
     flex-direction: row;
-    color: white;
-    background-color: rgb(47, 47, 47);
+    color: rgb(255, 255, 255);
+    background-color: rgb(87, 87, 87);
     text-align: center;
     justify-content: center;
     padding-bottom: 10px;
@@ -559,15 +562,17 @@ html, body {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: red;
-    color: white;
+    background-color: rgb(255, 221, 0);
+    color: rgb(0, 0, 0);
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
   }
   
   #myBtn:hover {
-    background-color: #555;
+    color: white;
+    background-color: red;
+    
   }
 
   /* bottom-banner */
