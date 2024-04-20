@@ -477,10 +477,13 @@ html, body {
     background-color: rgb(87, 87, 87);
     padding-bottom: 100px;
 }
-
+.footer h3 {
+    text-decoration: underline;
+}
 .footer div li a {
     color: #ffffff;
     text-decoration: none;
+    
 }
 .footer > div {
     width: 100%;
