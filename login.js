@@ -49,5 +49,6 @@ function auth() {
         alert("Please enter a valid password. It should contain at least one lowercase letter, one uppercase letter, one number and one special character.");
         return;
     }
-    popups("Login Successful");
+    window.location.assign("index.html");
+    alert("Login Successful");
 }
