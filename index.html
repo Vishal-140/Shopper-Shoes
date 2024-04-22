@@ -5,7 +5,7 @@
 	<meta name="viewport"
 		content="width=device-width, initial-scale=1.0">
 		<link rel="icon" href="./assets/icon.jpg" >
-		<title>Shopper Login / Signup</title>
+		<title>Shopper Login</title>
 	<link rel="stylesheet" href="login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +14,18 @@
 
 <body>
 	<header>
-		<h1 class="heading">SHOPPER.COM</h1>
+		<h1 class="heading">SHOPPER SHOES</h1>
 	</header>
 
 	<!-- container div -->
 	<div class="container">
 
-		<!-- upper button section to select the login or signup form -->
-		<div class="slider"></div>
 		<div class="btn">
-			<button class="login">Login</button>
-			<button class="signup">Signup</button>
+			<button class="login">Enter valid Credentials</button>
+			
 		</div>
 
-		<!-- Form section that contains the login and the signup form -->
+		<!-- Form section that contains the login form -->
 		<div class="form-section">
 
 			<!-- login form -->
@@ -37,14 +35,6 @@
 				<button class="clkbtn" onclick="auth()">Login</button>
 			</div>
 
-			<!-- signup form -->
-			<div class="signup-box">
-				<input type="text" class="name ele" placeholder="Enter your name">
-				<input type="email" class="email ele" id="email" placeholder="youremail@email.com">
-				<input type="password" class="password ele" id="password" placeholder="password">
-				<input type="password" class="password ele" id="password" placeholder="Confirm password">
-				<button class="clkbtn" onclick="auth()">Signup</button>
-			</div>
 		</div>
 	</div>
 	<script src="login.js">

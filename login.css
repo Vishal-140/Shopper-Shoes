@@ -26,7 +26,9 @@ header {
 }
 
 .heading {
-	color: rgb(249, 97, 21);
+	background: -webkit-linear-gradient(rgb(255, 195, 110),  rgb(255, 146, 91));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .title {
@@ -48,6 +50,7 @@ header {
 	height: 60px;
 	width: 300px;
 	margin: 20px auto;
+	background: linear-gradient(to right, rgb(255, 195, 110), rgb(255, 146, 91));
 	box-shadow: 10px 10px 30px rgb(254, 215, 188);
 	border-radius: 50px;
 	display: flex;
@@ -55,30 +58,13 @@ header {
 	align-items: center;
 }
 
-.login, .signup {
+.login {
 	font-size: 22px;
 	border: none;
 	outline: none;
 	background-color: transparent;
 	position: relative;
 	cursor: pointer;
-}
-
-.slider {
-	height: 60px;
-	width: 150px;
-	border-radius: 50px;
-	background-image: linear-gradient(to right,
-			rgb(255, 195, 110),
-			rgb(255, 146, 91));
-	position: absolute;
-	top: 20px;
-	left: 100px;
-	transition: all 0.5s ease-in-out;
-}
-
-.moveslider {
-	left: 250px;
 }
 
 .form-section {
@@ -91,11 +77,7 @@ header {
 	left: 0px;
 }
 
-.form-section-move {
-	left: -500px;
-}
-
-.login-box, .signup-box {
+.login-box {
 	height: 100%;
 	width: 500px;
 	display: flex;
@@ -109,9 +91,7 @@ header {
 	gap: 50px;
 }
 
-.signup-box {
-	gap: 30px;
-}
+
 
 .ele {
 	height: 60px;
@@ -139,7 +119,7 @@ header {
 
 /* For Responsiveness of the page */
 
-/* @media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
 	.container {
 		height: 600px;
 		width: 300px;
@@ -155,20 +135,10 @@ header {
 		margin: 20px auto;
 	}
 
-	.login,
-	.signup {
+	.login{
 		font-size: 19px;
 	}
 
-	.slider {
-		height: 50px;
-		width: 100px;
-		left: 50px;
-	}
-
-	.moveslider {
-		left: 150px;
-	}
 
 	.form-section {
 		height: 500px;
@@ -179,8 +149,7 @@ header {
 		left: -300px;
 	}
 
-	.login-box,
-	.signup-box {
+	.login-box {
 		height: 100%;
 		width: 300px;
 	}
@@ -218,21 +187,10 @@ header {
 		margin: 20px auto;
 	}
 
-	.login,
-	.signup {
+	.login{
 		font-size: 19px;
 	}
-
-	.slider {
-		height: 50px;
-		width: 100px;
-		left: 27px;
-	}
-
-	.moveslider {
-		left: 127px;
-	}
-
+	
 	.form-section {
 		height: 500px;
 		width: 500px;
@@ -242,8 +200,7 @@ header {
 		left: -250px;
 	}
 
-	.login-box,
-	.signup-box {
+	.login-box {
 		height: 100%;
 		width: 250px;
 	}
@@ -259,4 +216,4 @@ header {
 		width: 130px;
 		font-size: 19px;
 	}
-} */
+} 
