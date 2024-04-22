@@ -1,33 +1,17 @@
-// let signup = document.querySelector(".signup");
-// let login = document.querySelector(".login");
-// let slider = document.querySelector(".slider");
-// let formSection = document.querySelector(".form-section");
+let signup = document.querySelector(".signup");
+let login = document.querySelector(".login");
+let slider = document.querySelector(".slider");
+let formSection = document.querySelector(".form-section");
 
-// signup.addEventListener("click", () => {
-//     slider.classList.add("moveslider");
-//     formSection.classList.add("form-section-move");
-// });
-// login.addEventListener("click", () => {
-//     slider.classList.remove("moveslider");
-//     formSection.classList.remove("form-section-move");
-// });
+signup.addEventListener("click", () => {
+    slider.classList.add("moveslider");
+    formSection.classList.add("form-section-move");
+});
 
-// function auth() {
-//     var email = document.getElementById("email").value;
-//     var password = document.getElementById("password").value;
-//     window.location.assign("home.html");
-
-    
-    // if(email == "vkc@gmail.com" && password == "vkc123") {
-    //     window.location.assign("index.html");
-    //     // alert("Login Successfully");
-    // }
-    // else{
-    //     alert("Invalid information");
-    //     return;
-    // }
-// }
-
+login.addEventListener("click", () => {
+    slider.classList.remove("moveslider");
+    formSection.classList.remove("form-section-move");
+});
 
 function auth() {
     var email = document.getElementById("email").value;
@@ -45,10 +29,10 @@ function auth() {
     var number = /[0-9]/.test(password);
     var specialCharacter = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
-    if (!(lowerCaseLetter && upperCaseLetter && specialCharacter)) {
+    if (!(lowerCaseLetter && upperCaseLetter && specialCharacter && number)) {
         alert("Please enter a valid password. It should contain at least one lowercase letter, one uppercase letter, one number and one special character.");
         return;
     }
-    window.location.assign("index.html");
-    alert("Login Successful");
+
+    window.location.assign("home.html");
 }
