@@ -82,7 +82,7 @@ html, body {
     position: fixed;
     top: 0;
     right: 0;
-    right: -100%; 
+    right: -110%; 
     width: 360px;
     height: 100vh;
     overflow-y: auto;
