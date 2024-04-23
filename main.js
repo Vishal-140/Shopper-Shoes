@@ -1,3 +1,30 @@
+// banner slideshow
+let currentImageIndex = 0;
+const images = document.querySelectorAll('.img');
+const dots = document.querySelectorAll('.dot');
+
+function showImage(index) {
+  images.forEach(image => image.style.display = 'none');
+  dots.forEach(dot => dot.classList.remove('active'));
+  images[index].style.display = 'block';
+  dots[index].classList.add('active');
+}
+
+function changeSlide(n) {
+  currentImageIndex = (currentImageIndex + n + images.length) % images.length;
+  showImage(currentImageIndex);
+}
+
+function currentSlide(n) {
+  currentImageIndex = n - 1;
+  showImage(currentImageIndex);
+}
+
+showImage(currentImageIndex);
+let slideshowInterval = setInterval(() => changeSlide(1), 5000);
+
+
+
 // OPEN & CLOSE CART
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
@@ -18,18 +45,18 @@ if (document.readyState == "loading") {
   start();
 }
 
-// =============== START ====================
+// START
 function start() {
   addEvents();
 }
 
-// ============= UPDATE & RERENDER ===========
+// UPDATE & RERENDER
 function update() {
   addEvents();
   updateTotal();
 }
 
-// =============== ADD EVENTS ===============
+// ADD EVENTS
 function addEvents() {
   // Remove items from cart
   let cartRemove_btns = document.querySelectorAll(".cart-remove");
@@ -55,7 +82,7 @@ function addEvents() {
   buy_btn.addEventListener("click", handle_buyOrder);
 }
 
-// ============= HANDLE EVENTS FUNCTIONS =============
+//  HANDLE EVENTS FUNCTIONS
 let itemsAdded = [];
 
 function handle_addCartItem() {
@@ -73,13 +100,13 @@ function handle_addCartItem() {
 
   // handle item is already exist
   if (itemsAdded.find((el) => el.title == newToAdd.title)) {
-    alert("This Item Is Already Exist!");
+    alert("This Item Already Exists in Cart!");
     return;
   } else {
     itemsAdded.push(newToAdd);
   }
 
-  
+
 
   // Add product to cart
   let cartBoxElement = CartBoxComponent(title, price, imgSrc);
@@ -124,7 +151,7 @@ function handle_buyOrder() {
   update();
 }
 
-// =========== UPDATE & RERENDER FUNCTIONS =========
+//  UPDATE & RERENDER FUNCTIONS
 function updateTotal() {
   let cartBoxes = document.querySelectorAll(".cart-box");
   const totalElement = cart.querySelector(".total-price");
@@ -138,13 +165,10 @@ function updateTotal() {
 
   // keep 2 digits after the decimal point
   total = total.toFixed(2);
-  // or you can use also
-  // total = Math.round(total * 100) / 100;
-
   totalElement.innerHTML = "₹" + total;
 }
 
-// ============= HTML COMPONENTS =============
+//  HTML COMPONENTS
 function CartBoxComponent(title, price, imgSrc) {
   return `
     <div class="cart-box">
@@ -159,41 +183,18 @@ function CartBoxComponent(title, price, imgSrc) {
     </div>`;
 }
 
+// pop up
+const buttons = document.querySelectorAll('.add-cart');
+const popups = document.querySelectorAll('.popup');
 
-
-
-
-
-
-
-
-
-
-// banner slideshow
-let currentImageIndex = 0;
-    const images = document.querySelectorAll('.img');
-    const dots = document.querySelectorAll('.dot');
-
-    function showImage(index) {
-        images.forEach(image => image.style.display = 'none');
-        dots.forEach(dot => dot.classList.remove('active'));
-        images[index].style.display = 'block';
-        dots[index].classList.add('active');
-    }
-
-    function changeSlide(n) {
-        currentImageIndex = (currentImageIndex + n + images.length) % images.length;
-        showImage(currentImageIndex);
-    }
-
-    function currentSlide(n) {
-        currentImageIndex = n - 1;
-        showImage(currentImageIndex);
-    }
-
-    showImage(currentImageIndex);
-
-    let slideshowInterval = setInterval(() => changeSlide(1), 5000);
+buttons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    popups[index].style.display = 'block';
+    setTimeout(() => {
+      popups[index].style.display = 'none';
+    }, 1500);
+  });
+});
 
 // Scroll to Top
 let mybutton = document.getElementById("myBtn");
@@ -212,18 +213,3 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
-
-
-
-// pop up
-const buttons = document.querySelectorAll('.add-cart');
-const popups = document.querySelectorAll('.popup');
-
-buttons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    popups[index].style.display = 'block';
-    setTimeout(() => {
-      popups[index].style.display = 'none';
-    }, 1500);
-  });
-});

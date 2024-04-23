@@ -2,11 +2,8 @@
 *{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
     list-style: none;
     text-decoration: none;
-    /* scroll-behavior: smooth; */
-    /* scroll-padding: 2rem; */
     font-family: "Protest Riot", sans-serif;
 }
 
@@ -73,9 +70,6 @@ html, body {
       margin-left: -50px;
     }
 }
-  
-  
-
 
 /* CART  */
 .cart{
@@ -318,11 +312,6 @@ html, body {
     
 }
 
-/* SHOP SECTION  */
-/* .shop{
-    margin-top: 2rem;
-} */
-
 .shop-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, auto));
@@ -380,9 +369,6 @@ html, body {
     margin: 0 30px 8px 30px;
     cursor: pointer;
     border-radius: 10px;
-    
-
-
 }
 .add-cart:hover{
     background-color: black;
@@ -407,7 +393,7 @@ html, body {
 }
 
 
-/*-----------------------Testimonial -----------------------*/
+/*Testimonial*/
 
 .testimonial-grid {
     width: 100vw;
@@ -468,6 +454,39 @@ html, body {
 }
 
 
+/* bottom-banner */
+
+.bottom-banner {
+	text-align: center;
+    height: 550px;
+    position: relative;
+    text-align: center;
+    background-color: #eaeaea;
+}
+
+.bottom-banner img {
+    height: 550px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.bottom-banner-text{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    color: #000000;
+    font-weight: 600;
+    font-size: 60px;
+}
+.bottom-banner p {
+    position: absolute;
+    top: 25%;
+    left: 22%;
+    color: #1f1f1f;
+    font-weight: 300;
+    font-size: 30px;
+}
 
 /* footer */
 
@@ -571,38 +590,3 @@ html, body {
     background-color: red;
     
   }
-
-  /* bottom-banner */
-
-.bottom-banner {
-	text-align: center;
-    height: 550px;
-    position: relative;
-    text-align: center;
-    background-color: #eaeaea;
-}
-
-.bottom-banner img {
-    height: 550px;
-    width: 100%;
-    object-fit: cover;
-
-}
-
-.bottom-banner-text{
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    color: #000000;
-    font-weight: 600;
-    font-size: 60px;
-}
-.bottom-banner p {
-    position: absolute;
-    top: 25%;
-    left: 22%;
-    color: #1f1f1f;
-    font-weight: 300;
-    font-size: 30px;
-}
-

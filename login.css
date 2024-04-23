@@ -27,8 +27,8 @@ header {
 
 .heading {
 	background: -webkit-linear-gradient(rgb(255, 195, 110),  rgb(255, 146, 91));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 .title {
@@ -216,4 +216,4 @@ header {
 		width: 130px;
 		font-size: 19px;
 	}
-} 
+}
